@@ -148,20 +148,51 @@ Explains project objective, architecture, and methodology.
 ---
 
 ## 📂 Project Structure
-GENAI_CAPSTONE/
-│
-├── app.py
-├── README.md
-├── requirements.txt
-│
-├── data/
-│ ├── Plant_1_Generation_Data.csv
-│ └── Plant_1_Weather_Sensor_Data.csv
-│
-├── utils/
-│ ├── preprocessing.py
-│ ├── feature_engineering.py
-│ └── train_model.py
-│
-├── models/
-│ └── plant1_model.pkl
+
+### 🔹 Core Application
+- `app.py` – Streamlit dashboard interface  
+- `requirements.txt` – Dependency list  
+
+### 🔹 Data
+- `data/Plant_1_Generation_Data.csv`  
+- `data/Plant_1_Weather_Sensor_Data.csv`  
+
+### 🔹 Machine Learning Modules (`utils/`)
+- `preprocessing.py` – Data merging & cleaning  
+- `feature_engineering.py` – Feature creation  
+- `train_model.py` – Model training and evaluation  
+
+### 🔹 Models
+- `models/plant1_model.pkl` – Saved trained model  
+
+
+---
+
+## 🚀 How to Run Locally
+
+1. Clone the repository:
+
+2. Install dependencies:
+
+3. Run the Streamlit app:
+
+---
+
+## 🌐 Deployment
+
+The application is deployed using Streamlit Community Cloud and is publicly accessible.
+
+🔗 https://solar-energy-forecasting-genai.streamlit.app/
+
+---
+
+## 🧠 Future Enhancements
+
+- Integration with real-time weather forecasts
+- Multi-plant forecasting support
+- Residual and error distribution analysis
+- Downloadable prediction reports
+- Grid optimization module (Milestone 2)
+
+---
+
