@@ -1,3 +1,6 @@
+# Version 1.0.1
+# Minor documentation update for project submission
+
 import streamlit as st
 import pandas as pd
 import numpy as np
