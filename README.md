@@ -131,7 +131,7 @@ Time-series split was used to prevent data leakage.
 | Random Forest | 180.46 | 540.20 | 0.9791 |
 | Gradient Boosting | **169.16** | **532.83** | **0.9797** |
 
-✅ **Best Model:** Gradient Boosting Regressor  
+**Best Model:** Gradient Boosting Regressor  
 
 The high R² score (~0.98) indicates strong predictive performance.
 
@@ -161,23 +161,23 @@ Explains project objective, architecture, and methodology.
 
 ## 📂 Project Structure
 
-### 🔹 Core Application
+###  Core Application
 - `app.py` – Streamlit dashboard interface  
 - `requirements.txt` – Dependency list  
 
-### 🔹 Data
+###  Data
 - `data/Plant_1_Generation_Data.csv`  
 - `data/Plant_1_Weather_Sensor_Data.csv`  
 
-### 🔹 Machine Learning Modules (`utils/`)
+###  Machine Learning Modules (`utils/`)
 - `preprocessing.py` – Data merging & cleaning  
 - `feature_engineering.py` – Feature creation  
 - `train_model.py` – Model training and evaluation  
 
-### 🔹 Models
+###  Models
 - `models/plant1_model.pkl` – Saved trained model  
 
-### 🔹 Assets
+###  Assets
 - `assets/architecture.png` – System architecture diagram  
 
 ---
