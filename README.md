@@ -25,6 +25,15 @@ The system applies supervised regression models and provides an interactive **St
 
 ---
 
+## ⭐ Key Highlights
+
+- End-to-end ML pipeline implementation  
+- Time-series aware train-test split  
+- Interactive model selection  
+- Real-time evaluation metrics  
+- Cloud deployment using Streamlit  
+- Clean modular project structure  
+
 ## 🎯 Objective
 
 To build a supervised regression system that predicts solar DC power output using:
