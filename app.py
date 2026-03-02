@@ -28,6 +28,8 @@ data_option = st.sidebar.radio(
 )
 
 df = None
+if df is None:
+    st.info("Please select a dataset from the sidebar to begin.")
 
 if data_option == "Use Default Plant 1":
     df = merge_data()
@@ -65,6 +67,14 @@ if df is not None:
     ]
 
     target = "DC_POWER"
+
+    required_columns = features + [target, "DATE_TIME"]
+
+    missing_cols = [col for col in required_columns if col not in df.columns]
+
+    if missing_cols:
+        st.error(f"Missing required columns: {missing_cols}")
+        st.stop()
 
     tabs = st.tabs(["📘 About", "📂 Preview", "🚀 Train", "📊 Evaluate"])
 
