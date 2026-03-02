@@ -1,5 +1,9 @@
-# 🌞 Solar Energy Forecasting System  
+# Solar Energy Forecasting System  
 ### Machine Learning–Based Solar Energy Forecasting Dashboard
+
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-Deployed-brightgreen)
+![License](https://img.shields.io/badge/License-MIT-orange)
 
 🔗 **Live Application:**  
 https://solar-energy-forecasting-genai.streamlit.app/
