@@ -169,6 +169,16 @@ if df is not None:
 
             st.success(f"{model_option} trained successfully!")
 
+            st.subheader("📌 Model Details")
+
+            test_size = len(df) - len(X_train)
+
+            st.info(f"""
+            Model Selected: {model_option}  
+            Training Samples: {len(X_train)}  
+            Testing Samples: {test_size}
+            """)
+
     # ================= TAB 3: EVALUATE ================= #
     with tabs[3]:
 
