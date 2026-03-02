@@ -1,195 +1,215 @@
-# 🌞 Solar Energy Forecasting System (GenAI Capstone Project)
+🌞 Solar Energy Forecasting System
+Machine Learning–Based Solar Energy Forecasting Dashboard
 
-🔗 **Live Application:**  
+🔗 Live Application:
 https://solar-energy-forecasting-genai.streamlit.app/
 
----
+📘 Project Overview
 
-## 📘 Project Overview
+This project presents a Machine Learning-based Solar Energy Forecasting Dashboard designed to predict solar power generation (DC_POWER) using historical plant generation data and weather sensor readings.
 
-This project presents a Machine Learning-based Solar Energy Forecasting System designed to predict solar power generation (DC_POWER) using historical plant output and weather sensor data.
+Accurate solar forecasting plays a crucial role in:
 
-Accurate solar forecasting is essential for:
-- Grid stability
-- Renewable energy integration
-- Energy scheduling
-- Efficient power management
+Grid stability
 
-The system uses classical regression models and provides an interactive Streamlit dashboard for training and evaluation.
+Renewable energy integration
 
----
+Energy scheduling
 
-## 🎯 Objective
+Efficient power management
+
+The system applies supervised regression models and provides an interactive Streamlit dashboard for training, evaluation, and visualization.
+
+🎯 Objective
 
 To build a supervised regression system that predicts solar DC power output using:
 
-- Irradiation
-- Ambient Temperature
-- Module Temperature
-- Time-based features (Hour, Month, Day of Week)
+Irradiation
 
----
+Ambient Temperature
 
-## 🏗 System Architecture
+Module Temperature
 
-The architecture consists of:
+Time-based features (Hour, Month, Day of Week)
 
-1. User Input (CSV Upload / Default Dataset)
-2. Streamlit Dashboard (app.py)
-3. Machine Learning Pipeline:
-   - Data Preprocessing
-   - Feature Engineering
-   - Model Training
-   - Model Evaluation
-4. Output Visualization
-5. Cloud Deployment (Streamlit Community Cloud)
+🏗️ System Architecture
 
-📌 The complete system architecture diagram is included in the project report.
+The system workflow consists of:
 
----
+User Input (CSV Upload / Default Dataset)
 
-## ⚙️ Technology Stack
+Streamlit Dashboard (app.py)
 
-| Component | Technology |
-|-----------|------------|
-| Programming Language | Python |
-| Data Processing | Pandas, NumPy |
-| Machine Learning | Scikit-Learn |
-| Models Used | Linear Regression, Random Forest, Gradient Boosting |
-| Visualization | Matplotlib |
-| UI Framework | Streamlit |
-| Deployment | Streamlit Cloud |
+Machine Learning Pipeline:
 
----
+Data Preprocessing
 
-## 📊 Dataset Description
+Feature Engineering
 
-The dataset includes:
+Model Training
 
-### Solar Generation Data
-- DC_POWER
-- AC_POWER
-- DAILY_YIELD
-- TOTAL_YIELD
+Model Evaluation
 
-### Weather Sensor Data
-- IRRADIATION
-- AMBIENT_TEMPERATURE
-- MODULE_TEMPERATURE
+Output Visualization
 
-### Time Information
-- DATE_TIME
+Cloud Deployment (Streamlit Community Cloud)
+
+⚙️ Technology Stack
+Component	Technology
+Programming Language	Python
+Data Processing	Pandas, NumPy
+Machine Learning	Scikit-Learn
+Models Used	Linear Regression, Random Forest, Gradient Boosting
+Visualization	Matplotlib
+UI Framework	Streamlit
+Deployment	Streamlit Community Cloud
+📊 Dataset Description
+
+The dataset contains:
+
+🔹 Solar Generation Data
+
+DC_POWER
+
+AC_POWER
+
+DAILY_YIELD
+
+TOTAL_YIELD
+
+🔹 Weather Sensor Data
+
+IRRADIATION
+
+AMBIENT_TEMPERATURE
+
+MODULE_TEMPERATURE
+
+🔹 Time Information
+
+DATE_TIME
 
 After merging and preprocessing:
-- ~68,000 records
-- Time-series based split (80% train, 20% test)
 
----
+~68,000 records
 
-## 🔍 Feature Engineering
+Time-series based split (80% train, 20% test)
+
+🔍 Feature Engineering
 
 Extracted time-based features:
 
-- Hour of Day
-- Month
-- Day of Week
+Hour of Day
 
-These features help capture daily and seasonal solar generation patterns.
+Month
 
----
+Day of Week
 
-## 🤖 Model Training & Evaluation
+These features help capture daily and seasonal solar generation trends.
+
+🤖 Model Training & Evaluation
 
 Three regression models were implemented:
 
-1. Linear Regression  
-2. Random Forest Regressor  
-3. Gradient Boosting Regressor  
+Linear Regression
 
-Time-series split was used to avoid data leakage.
+Random Forest Regressor
 
-### 📈 Performance Comparison
+Gradient Boosting Regressor
 
-| Model | MAE | RMSE | R² Score |
-|--------|------|-------|-----------|
-| Linear Regression | 282.99 | 593.91 | 0.9748 |
-| Random Forest | 180.46 | 540.20 | 0.9791 |
-| Gradient Boosting | **169.16** | **532.83** | **0.9797** |
+Time-series split was used to prevent data leakage.
 
-✅ **Best Model:** Gradient Boosting Regressor
+📈 Performance Comparison
+Model	MAE	RMSE	R² Score
+Linear Regression	282.99	593.91	0.9748
+Random Forest	180.46	540.20	0.9791
+Gradient Boosting	169.16	532.83	0.9797
+
+✅ Best Model: Gradient Boosting Regressor
 
 The high R² score (~0.98) indicates strong predictive performance.
 
----
-
-## 📱 Application Features
+📱 Application Features
 
 The Streamlit dashboard contains four main sections:
 
-### 📘 About
+📘 About
+
 Explains project objective, architecture, and methodology.
 
-### 📂 Preview
-- Dataset overview
-- Column summary
-- Interactive preview
+📂 Preview
 
-### 🚀 Train
-- Model selection
-- Interactive training
+Dataset overview
 
-### 📊 Evaluate
-- MAE, RMSE, R² metrics
-- Actual vs Predicted visualization
+Column summary
 
----
+Interactive preview
 
-## 📂 Project Structure
+🚀 Train
 
-### 🔹 Core Application
-- `app.py` – Streamlit dashboard interface  
-- `requirements.txt` – Dependency list  
+Model selection
 
-### 🔹 Data
-- `data/Plant_1_Generation_Data.csv`  
-- `data/Plant_1_Weather_Sensor_Data.csv`  
+Interactive training
 
-### 🔹 Machine Learning Modules (`utils/`)
-- `preprocessing.py` – Data merging & cleaning  
-- `feature_engineering.py` – Feature creation  
-- `train_model.py` – Model training and evaluation  
+📊 Evaluate
 
-### 🔹 Models
-- `models/plant1_model.pkl` – Saved trained model  
+MAE, RMSE, R² metrics
 
+Actual vs Predicted visualization
 
----
+📂 Project Structure
+🔹 Core Application
 
-## 🚀 How to Run Locally
+app.py – Streamlit dashboard interface
 
-1. Clone the repository:
+requirements.txt – Dependency list
 
-2. Install dependencies:
+🔹 Data
 
-3. Run the Streamlit app:
+data/Plant_1_Generation_Data.csv
 
----
+data/Plant_1_Weather_Sensor_Data.csv
 
-## 🌐 Deployment
+🔹 Machine Learning Modules (utils/)
+
+preprocessing.py – Data merging & cleaning
+
+feature_engineering.py – Feature creation
+
+train_model.py – Model training and evaluation
+
+🔹 Models
+
+models/plant1_model.pkl – Saved trained model
+
+🔹 Assets
+
+assets/architecture.png – System architecture diagram
+
+🚀 How to Run Locally
+1️⃣ Clone the repository
+git clone <your-repo-link>
+cd <repo-name>
+2️⃣ Install dependencies
+pip install -r requirements.txt
+3️⃣ Run the Streamlit app
+streamlit run app.py
+🌐 Deployment
 
 The application is deployed using Streamlit Community Cloud and is publicly accessible.
 
 🔗 https://solar-energy-forecasting-genai.streamlit.app/
 
----
+👥 Team Members
 
-## 🧠 Future Enhancements
+Ritik (2401010385)
 
-- Integration with real-time weather forecasts
-- Multi-plant forecasting support
-- Residual and error distribution analysis
-- Downloadable prediction reports
-- Grid optimization module (Milestone 2)
+Aman (2401010060)
 
----
+Dev Kothari (2401010147)
 
+Deepanshu Chaudhary (2401010145)
+
+📜 License
+
+This project is licensed under the MIT License.
