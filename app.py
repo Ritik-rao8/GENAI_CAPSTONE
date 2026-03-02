@@ -16,7 +16,7 @@ from utils.feature_engineering import create_time_features
 
 st.set_page_config(page_title="Solar Forecasting Dashboard", layout="wide")
 
-st.title("🌞 Solar Energy Forecasting Dashboard")
+st.title("Solar Energy Forecasting Dashboard")
 st.markdown("---")
 # ---------------- SIDEBAR ---------------- #
 
