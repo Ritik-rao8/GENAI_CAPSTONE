@@ -201,9 +201,9 @@ if df is not None:
             r2 = r2_score(y_test, predictions)
 
             col1, col2, col3 = st.columns(3)
-            col1.metric("MAE", round(mae, 2))
-            col2.metric("RMSE", round(rmse, 2))
-            col3.metric("R2 Score", round(r2, 4))
+            col1.metric("MAE", round(mae, 2), help="Mean Absolute Error")
+            col2.metric("RMSE", round(rmse, 2), help="Root Mean Squared Error")
+            col3.metric("R² Score", round(r2, 4), help="Coefficient of Determination")
 
             st.markdown("### Actual vs Predicted")
 
