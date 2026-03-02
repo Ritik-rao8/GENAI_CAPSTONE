@@ -28,8 +28,7 @@ data_option = st.sidebar.radio(
 )
 
 df = None
-if df is None:
-    st.info("Please select a dataset from the sidebar to begin.")
+
 
 if data_option == "Use Default Plant 1":
     df = merge_data()
@@ -50,7 +49,8 @@ if "model" not in st.session_state:
     st.session_state.model = None
 
 # ---------------- MAIN ---------------- #
-
+if df is None:
+    st.info("Please select a dataset from the sidebar to begin.")
 if df is not None:
 
     df["DATE_TIME"] = pd.to_datetime(df["DATE_TIME"], errors="coerce")
