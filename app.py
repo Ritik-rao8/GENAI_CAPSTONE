@@ -162,7 +162,8 @@ if df is not None:
                     random_state=42
                 )
 
-            model.fit(X_train, y_train)
+            with st.spinner("Training model... Please wait"):
+                model.fit(X_train, y_train)
 
             st.session_state.model = model
 
