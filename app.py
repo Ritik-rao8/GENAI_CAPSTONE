@@ -219,3 +219,5 @@ if df is not None:
 
         else:
             st.warning("Please train a model first.")
+st.markdown("---")
+st.caption("Solar Forecasting Dashboard | GENAI Capstone Project")
