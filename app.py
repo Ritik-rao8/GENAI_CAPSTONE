@@ -220,10 +220,14 @@ if df is not None:
 
             st.markdown("### Actual vs Predicted")
 
-            fig, ax = plt.subplots()
-            ax.plot(y_test.values[:500], label="Actual")
-            ax.plot(predictions[:500], label="Predicted")
+            fig, ax = plt.subplots(figsize=(10, 4))
+            ax.plot(y_test.values[:500], label="Actual", linewidth=2)
+            ax.plot(predictions[:500], label="Predicted", linestyle="--")
+            ax.set_title("Actual vs Predicted Solar Output")
+            ax.set_xlabel("Time Index")
+            ax.set_ylabel("DC Power")
             ax.legend()
+            ax.grid(True)
 
             st.pyplot(fig)
 
