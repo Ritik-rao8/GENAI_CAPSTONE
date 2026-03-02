@@ -3,9 +3,6 @@
 🔗 **Live Application:**  
 https://solar-energy-forecasting-genai.streamlit.app/
 
-📂 **GitHub Repository:**  
-https://github.com/Ritik-rao8/GENAI_CAPSTONE
-
 ---
 
 ## 📘 Project Overview
